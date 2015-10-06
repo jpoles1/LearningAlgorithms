@@ -9,8 +9,8 @@ primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67
 def binarySearch(arr, target):
     mini = 0;
     maxi = len(arr)-1
-    while(maxi<mini):
-        guessindex = floor(mini+maxi/2) 
+    while(maxi>=mini):
+        guessindex = floor((mini+maxi)/2);
         guess=arr[guessindex]
         if guess==target:
             return guessindex;
@@ -21,5 +21,5 @@ def binarySearch(arr, target):
         else:
             raise ValueError("This shouldn't happen...");
             return -1;
-    return -2;
-binarySearch(primes, 19);
+    return -1;
+print(binarySearch(primes, 61));
